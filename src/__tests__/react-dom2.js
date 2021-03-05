@@ -5,6 +5,6 @@ import {FavoriteNumber} from '../favorite-number'
 
 test('renders a number input with the label "Favorite Number"', () => {
   render(<FavoriteNumber />)
-  const input = screen.getByLabelText('Favorite Number')
+  const input = screen.getByLabelText(/favorite number/i)
   expect(input).toHaveAttribute('type', 'number')
 })
